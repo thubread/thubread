@@ -1,0 +1,50 @@
+import streamlit as st
+
+st.set_page_config(page_title='Trắc nghiệm tính cách', page_icon=':question:', layout='wide')
+st.title('Hãy cjọn một con vật bạn yêu thích')
+col1, col2, col3, col4, col5 = st.columns(5)
+personality = {'Con mèo': ' Bạn rất dễ tin người, ngoài ra bạn còn là người giàu cảm xúc và dễ xúc động',
+               'Con chó': 'Bạn có tính cách nhiệt tình, thành thật và thẳng thắn',
+               'Con vịt': 'Bạn có tính cách điềm đạm, vui tính. Bạn sống một cách giản dị, đôi khi bạn lại rất dthw.',
+               'Con cừu': 'Bạn là người hiền lành và ấm áp. Bạn thường sống chậm, nhẹ nhàng',
+               'Con cá': 'Bạn có tính cách trầm lặng, sâu sắc, hay suy nghĩ nhiềuu. Bạn ưa ngắm hơn nói, thích yên tĩnh hơn ồn ảo'}
+
+with col1:
+  b1 = st.button('Con mèo')
+with col2:
+  b2 = st.button('Con chó')
+with col3:
+  b3 = st.button('Con vịt')
+with col4:
+  b4 = st.button('Con cừu')
+with col5:
+  b5 = st.button('Con cá')
+
+if b1:
+  with st.expander('Con mèo'):
+    st.write(personality['Con mèo'])
+if b2:
+  with st.expander('Con chó'):
+    st.write(personality['Con chó'])
+if b3:
+  with st.expander('Con vịt'):
+    st.write(personality['Con vịt'])
+if b4:
+  with st.expander('Con cừu'):
+    st.write(personality['Con cừu'])
+if b5:
+  with st.expander('Con cá'):
+    st.write(personality['Con cá'])
+
+with st.sidebar:
+  st.title('Kiểm tra tính cách của bạn')
+  if b1:
+    st.write('Con vật bạn chọn là con mèo :leopard:')
+  if b2:
+    st.write('Con vật bạn chọn là con chó')
+  if b3:
+    st.write('Con vật bạn chọn là con vịt')
+  if b4:
+    st.write('Con vật bạn chọn là con cừu')
+  if b5:
+    st.write('Con vật bạn chọn là con cá')
